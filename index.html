@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.2/buzz.min.js"></script>
+   
+   <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+
+        #blog {
+            padding: 25px 25px;
+            box-shadow: 0 0 15px 0;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;  
+            background-color: brown; 
+        }
+
+        .tablink {
+            background-color: white;
+            color: #A0DCF1;
+            float: left;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 150px;
+            border: none;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            max-height: 93px;
+
+        }
+
+        .tablink>img {
+            max-height: 40px;
+            align-self: center;
+        }
+
+        nav {
+            background-color: white;
+            width: 100%;
+            display: flex;
+            box-shadow: 0 0 15px 0 #A0DCF1;
+            margin-bottom: 20px;
+
+        }
+
+        #section1 {
+            flex: 1;
+            display: flex;
+            justify-content: left;
+            
+        }
+
+        #section2 {
+            justify-self: flex-end;
+            display: flex;
+            justify-content: right;
+        }
+
+        #section2 button {
+            float: right;
+        }
+
+        .tablink:hover {
+            background-color: #A0DCF1;
+            color: white;
+        }
+
+
+        .button {
+            text-align: center;
+        }
+
+        #slider {
+            overflow: hidden;
+        }
+
+        #slider figure {
+            position: relative;
+            width: 1000%;
+            margin: 0;
+            left: 0;
+            animation: 35s slider infinite;
+        }
+
+        #slider figure img {
+            width: 5%;
+            float: left;
+        }
+
+        @keyframes slider {
+
+            0% {
+                left: 0;
+            }
+
+            7% {
+                left: 0;
+            }
+
+            10% {
+                left: -50%;
+            }
+
+            17% {
+                left: -50%;
+            }
+
+            20% {
+                left: -100%;
+            }
+
+            27% {
+                left: -100%;
+            }
+
+            30% {
+                left: -150%;
+            }
+
+            37% {
+                left: -150%;
+            }
+
+            40% {
+                left: -200%;
+            }
+
+            47% {
+                left: -200%;
+            }
+
+            50% {
+                left: -250%;
+            }
+
+            57% {
+                left: -250%;
+            }
+
+            60% {
+                left: -300%;
+            }
+
+            67% {
+                left: -300%;
+            }
+
+            70% {
+                left: -350%;
+            }
+
+            77% {
+                left: -350%;
+            }
+
+            80% {
+                left: -400%;
+            }
+
+            87% {
+                left: -400%;
+            }
+
+            90% {
+                left: -450%;
+            }
+
+            97% {
+                left: -450%;
+            }
+
+            100% {
+                left: -450%
+            }
+        }
+
+        #title {
+            flex: 1;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: grey;
+            font-size: 35px;
+            padding-top: 80px;
+            padding-bottom: 30px;
+        }
+
+        .row1 {
+            padding-right: 150px;
+            padding-left: 150px;
+        }
+
+        .column1 {
+            float: left;
+            width: 50%;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            padding: 50px 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 26px;
+            line-height: 30px;
+            text-align: center;
+            color: #A0DCF1;
+            height: auto;
+        }
+
+        .row2 {
+            padding-right: 100px;
+            padding-left: 100px;
+            padding-top: 50px;
+            height: 200px;
+            color: grey;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16x;
+            line-height: 30px;
+            text-align: center;
+            margin: 0;
+        }
+
+        #technique_title {
+            font-size: 30px;
+        }
+
+        .column2 {
+            float: left;
+            width: 33.33%;
+            padding-top: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            height: auto;
+            color: grey;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            line-height: 30px;
+            text-align: justify;
+        }
+
+        #iterations {
+            text-align: center;
+            padding: 100px 100px
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #subtitle {
+            Text-align: center;
+            color: grey;
+            font-size: 20px;
+            Padding-bottom: 40px;
+        }
+
+        .row3 {
+            padding-right: 100px;
+            padding-left: 100px;
+            padding-top: 50px;
+            text-align: center;
+            color: grey;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .column3 {
+            float: left;
+            text-align: center;
+            width: 33.33%;
+            padding-left: 25px 25px 0 25px;
+        }
+
+        .one {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            flex: 1;
+            max-width: auto;
+            padding: 25px;
+            transition: transform .3s;
+        }
+
+        .one:hover {
+            transform: scale(1.2);
+        }
+
+        #tablinks {
+            background-color: white;
+            margin: 50px;
+            color: grey;
+            box-shadow: 0 0 8px 0 grey;
+            border-radius: 18px;
+            min-width: 200px;
+            min-height: 250px;
+        }
+
+        .blogexample {
+            width: auto;
+            min-height: 150px;
+            padding: 20px 20px 0 20px;
+        }
+
+        #backarrow {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 17px;
+            line-height: 26px;
+            text-align: center;
+            color: black;
+            background: white
+        }
+
+        .blogtitle {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 50px 100px 100px 100px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #blogparagraph {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 50px 200px 50px 200px;
+            font-size: 17px;
+            text-align: left;
+            line-height: 26px;
+        }
+
+        .blogimage {
+            height: auto;
+            width: 100%;
+            padding: 80px 200px 80px 200px;
+        }
+
+        #contact {
+            padding-top: 100px;
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 4px #000;
+            font-size: 25px;
+            line-height: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 2.5;
+        }
+
+        #contact .social {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        #contact .social>img {
+            flex: 1;
+            max-width: 55pt;
+            margin: 16px;
+            transition: transform .3s;
+            cursor: pointer;
+        }
+
+        #contact .social>img:hover {
+            transform: scale(1.2);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div id="section1">
+            <button class="tablink" onclick="openPage('Home')"><img src="images/image1.png"></button>
+            <button class="tablink" onclick="openPage('Home')" id="defaultOpen">Home</button>
+            <button class="tablink" onclick="openPage('Gallery')">Gallery</button>
+            <button class="tablink" onclick="openPage('Blog')">Blog</button>
+        </div>
+
+        <div id="section2">
+            <button class="tablink" onclick="openPage('Contact')">Contact</button>
+        </div>
+    </nav>
+
+    <section id="container">
+        <div id="Home" class="tabcontent">
+            <div id="slider">
+                <figure>
+                    <img src="images/image1.png">
+                    <img src="images/image2.png">
+                    <img src="images/image3.png">
+                    <img src="images/image4.png">
+                    <img src="images/image5.png">
+                    <img src="images/image6.png">
+                    <img src="images/image7.png">
+                    <img src="images/image8.png">
+                    <img src="images/image9.png">
+                    <img src="images/image1.png">
+                    <img src="images/image2.png">
+                </figure>
+            </div>
+
+            <div id=title>
+                The Icons and their iterations
+            </div>
+            <div id="iterations">
+                <img src="images/iterations.png">
+            </div>
+        </div>
+    </section>
+   
+    <div id="Gallery" class="tabcontent">
+
+            <div class="row3">
+                <p>
+                    Gallery
+                </p>
+                <div class="column3">
+                    <div class="photos">
+                        <img class="one" id="image1sound" src="images/image1.png">
+                        <img class="one" id="image2sound" src="images/image2.png">
+                        <img class="one" id="image3sound" src="images/image3.png">
+                    </div>
+                </div>
+                <div class="column3">
+                    <div class="photos">
+                        <img class="one" id="image4sound" src="images/image4.png">
+                        <img class="one" id="image5sound" src="images/image5.png">
+                        <img class="one" id="image6sound" src="images/image6.png">
+                    </div>
+                </div>
+                <div class="column3">
+                    <div class="photos">
+                        <img class="one" id="image7sound" src="images/image7.png">
+                        <img class="one" id="image8sound" src="images/image8.png">
+                        <img class="one" id="image9sound" src="images/image9.png">
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div id="Blog" class="tabcontent">
+
+        <div class="row3">
+            <div id="Blog" class="column3" style="background: rgba(255, 255, 255, 0);">
+                <button id="tablinks" class="tablink" onclick="openPage('week4session1')">Week 4 Session 1<img src=images/blacksquares.png class="blogexample"></button>
+                <button id="tablinks" class="tablink" onclick="openPage('week4session2')">Week 4 Session 2 <img src="images/rockclimbing.png" class="blogexample"></button>   
+            </div> 
+            <div id="Blog" class="column3">
+                <button id="tablinks" class="tablink" onclick="openPage('week5session1')">Week 5 Session 1 <img src="images/iterations.png" class="blogexample"></button>
+                <button id="tablinks" class="tablink" onclick="openPage('week5session2')">Week 5 Session 2 <img src="images/codeextract2.png" class="blogexample"></button>
+            </div>
+            <div id="Blog" class="column3">
+                <button id="tablinks" class="tablink" onclick="openPage('week6session1')">Week 6 Session 1 <img src="images/audioimg.png" class="blogexample"></button>
+                <button id="tablinks" class="tablink" onclick="openPage('week6session2')">Week 6 Session 2 <img src="images/image1.png" class="blogexample"></button>
+            </div>
+        </div>    
+    </div>   
+    
+    <div id="week4session1" class="tabcontent">
+        <div id="blogparagraph">
+
+            <button id="backarrow" class="tablink" onclick="openPage('Blog')">Back</button>
+
+            <div class="blogtitle">
+                Week 4 Session 1
+            </div>
+
+            During this week the class explored the Black Squares project where 
+            students were to create different images/icons to represent certain 
+            words through the use of four black squares only.
+            
+            <br>
+            <br>
+
+            by completeing multiple iterations of each it allowed us to view all the posible 
+            ideas on paper which allowed the designs to evolve to become a closer 
+            repesentation to what the criteria for the image asked for. For example, the image 
+            for bold started off as four large squares next to and on top of each other, 
+            however, after some iterations, it was decided that the image with the one large 
+            square with others stacked on top would become the best to represent the word as it 
+            demonstrated the idea of bold the best.
+            Below is an example of the work that was produced through this task.
+
+            <img class="blogimage"src="images/blacksquares.png">
+
+        </div>
+    </div> 
+    
+    <div id="week4session2" class="tabcontent">
+        <div id="blogparagraph">
+
+            <button id="backarrow" class="tablink" onclick="openPage('Blog')">Back</button>
+
+
+            <div class="blogtitle">
+                Week 4 Session 2
+            </div>
+
+            This week the homework task allocated was to draw up a design of a random icon using 
+            at least 20 iterations in 10 minutes to develop a piece that embodies all the great aspects of the 
+            previous designs into one, further exploring the task similar to last weeks, however, 
+            during this task we were to use a single icon and develop it further. 
+            
+            <br>
+            <br>
+
+            For this particular task I have chosen an icon that is meant to represent rock climbing. Through brief 
+            research and iterations the icon came to an outcome with a design where medium to thick lines were used
+            to express simple yet affective expression, which would be easy on the eye, yet detailed enough to
+            show the viewers what is being presented. Below are the iterations that took place and the process that
+            was taken to reach a sufficient outcome
+
+            <img class="blogimage" src="images/rockclimbing.png">
+
+            The next activity in this weeks homework was to design at least 5 iterations of the 9 icon assessment, 
+            creating a total of 45 sketches total. However, during this weeks homework I created 11 items with 4 
+            sketches each. This was the beginning of the development of the icons to reach 
+            a suitable design. Below are the initial developmets of all the designs.
+
+            <img class="blogimage" src="images/drawing1.jpg">
+            For the cloud i believe the fourth design was the best as it is aesthetic, simple and easy to understand.
+            As for the thinking cloud I believe the fourth design was also the best iteration as it best resembles 
+            what a thinking cloud looks like. These two designs will go through further iterations  on illustrator 
+            to make them more suitable for presentation.
+            <img class="blogimage" src="images/drawing2.jpg">
+            The pillow was difficult as it needed to incorporate shadow without making the image look too realistic.
+            so as for the pillow I believe the third iteration was the best, the shading of the pillow will be fixed 
+            up in illustrator so that it will be able to match the rest of the design as a set.
+            The bubble is a very difficult item to draw as it is transparent having no shadows and only reflections.
+            The third iteration has a nice curve where the reflection is, but like all the other designs will need to 
+            be further developed in illustrator.
+            <img class="blogimage" src="images/drawing3.jpg">
+            For the moon there were two options to go with; the realistic version or cartoon version. As all the icons 
+            follow the simple look I chose to go for the simple crescent.
+            The bed was difficult as it required multiple shapes to demostrate what the object is. In the beginning I 
+            tried showing this from an angled point of view but in the end went to the side where it was minimalistic 
+            but still determinable.
+            <img class="blogimage" src="images/drawing4.jpg">
+            The Swirl above was a random design that indicates the transition into a dream. There were a few iterations 
+            as I wasn't sure which way to go at first. But after a few design i made a design which gradually gets smaller
+            as it gets closer to the center.
+            The brain was very difficult to draw as it has so many different aspects and ratios. I began with a simple brain 
+            then later a head as well. However, to make the design simple the brain by itself will go forward.
+            <img class="blogimage" src="images/drawing5.jpg">
+            The snoring icon, or the depiction of what snoring consists of, three Z's. the simplest design that suites
+            the rest of the icons is the third. The stars are a design that I wasn't too sure about as there was already a
+            moon, however the last design is the simplest and the neetest. there are possibilities that the moon and the 
+            stars may join to make one icon
+            <img class="blogimage" src="images/drawing6.jpg">
+            The globe went through a few iterations but ultimately stayed the same. The globe struggles to represent the
+            theme dream so it may not be added to the final designs.
+
+        </div>
+    </div>
+
+    <div id="week5session1" class="tabcontent">
+        <div id="blogparagraph">
+
+            <button id="backarrow" class="tablink" onclick="openPage('Blog')">Back</button>
+
+             <div class="blogtitle">
+                Week 5 Session 1
+             </div>
+
+             During this weeks homework task we were asked to use hues and saturation to come up with a coloured icon. The 
+             initial hues that I decided to go with were light blues and greys to represent dream. In the first image, the cloud, 
+             only one hue was used blue, this worked for the cloud as the different value and saturation gave enough contrast for
+             the cloud to stand out. For the second icon, I didn't add another colour but grey was added to give it some more
+             contrast. I wasnt up until the moon and stars when another hue was added. However, I felt the amount of contrast
+             was on the edge of being too much when trying to demonstrate the theme of dream. Any more colour would have made the 
+             icon to vibrant and stand out from the other designs.
+
+             <img src="images/initialiteration.png" class="blogimage">
+
+
+             <img src="images/iterations.png" class="blogimage">
+        </div>
+    </div>
+
+    <div id="week5session2" class="tabcontent">
+        <div id="blogparagraph">
+
+            <button id="backarrow" class="tablink" onclick="openPage('Blog')">Back</button>
+
+             <div class="blogtitle">
+                Week 5 Session 2
+             </div>
+
+             This week the homework tasks asked us to continue iterations on the icon designs. This icon design process had been 
+             completed last week. During this weeks homework period I began work on the website. including writing up the html and 
+             css to support the information I want on the website. The website began with a navigation bar using basic html and css.
+
+             <img src="images/codeextract1.png" class="blogimage">
+             <img src="images/codeextract2.png" class="blogimage">
+
+             Another way to show off my images in the website was to use an image slider. By doing this it shows more detail and 
+             commitement to the assessment. I created the slider using keyframes and percentages to allow all the images to become
+             horizontally aligned 10x larger that the page. Then, with the use of the keframes, I would slowly move through the 
+             images giving it the slider affect.
+
+             <img src="images/sliderhtml.png" class="blogimage">
+
+        </div>
+    </div>
+
+    <div id="week6session1" class="tabcontent">
+        <div id="blogparagraph">
+
+            <button id="backarrow" class="tablink" onclick="openPage('Blog')">Back</button>
+
+            <div class="blogtitle">
+                Week 6 Session 1
+            </div>
+
+            For the homework tasks this week we were to add in audio that correlates to the icons and upload our websites to github. 
+            The Audio was both outsourced and created. The outsourced material was sourced from Pixabay and contains audio that was 
+            unable to be recorded at a professional level. The audio was then imported into Audobe Audition to edit and make the audio 
+            fit for the website.
+
+            <img src="images/audioimg.png" class="blogimage">
+            <img src="images/audioimg2.png" class="blogimage">
+
+            As for GitHub, the process was straight forward and 
+            easy to follow. Once the website is uploaded you can view online as a proper website. Below is the part of the process of 
+            uploading the website to github
+
+            <img src="images/githubimage.png" class="blogimage">
+
+            I decideded to make the website a larger project to show off the skills and knowledge I developed over the the course of my 
+            previous studies this includes incorporating the blog into the website as well. I have developed this website so that it 
+            contains a home page gallery, blog page and a contact page as seen above. Each one of the buttons demostrates basic 
+            javascript use and ineractive design.
+
+        </div>
+    </div>
+
+    <div id="week6session2" class="tabcontent">
+        <div id="blogparagraph">
+
+        <button id="backarrow" class="tablink" onclick="openPage('Blog')">Back</button>
+
+            <div class="blogtitle">
+                Week 6 Session 2
+            </div>
+
+            Throughout the few weeks we worked on the project I leart a lot, from the importance of iterations, developing my illustrator
+            skillset, how to use Adobe Audition and Developing my html, css and javascript skills. This is the final part of the Blog for 
+            This Assessment. 
+            
+            <br>                
+            <br>
+
+            In week four of the homework tasks we looked at the black squares task, which gave us an initial idea of how iterations work and 
+            how we use these iterations to come up with a better design. In the second session of week four we looked further into 
+            iterations with the 45 design task in 10 minutes, then sketching up iterations that would become the beginning of the icon 
+            development
+
+            <br>
+            <br>
+
+            During the fifth week we began to incorporate colour into the designs. Starting with a single hue and gradually increasing them
+            until there were too many. For the theme dream, very few hues were  used throughout the many designs to try to accomplish
+            cohersion and resist icons from astraying from the group. During this week the majority of the iterations were done on illustrator
+            to a high quality. For the Second task of week five I began to code the website for the icons to be displayed.
+
+            <br>
+            <br>
+
+            Week six was the final week of the homework tasks for this assessment. I continued developing the website making sure all was functioning
+            and working well. I incorporated the slider to increase the aesthetic appeal of the website. During this week work was also done
+            on the  audio for the icon. When hovering over the icons in the gallery there will be an audio response.
+        </div>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <div id="contact">
+
+            <h2>Contact us</h2>
+            <h4>Icon Design</h4>
+
+            <p>
+
+                <span><b>Phone: </b> 1800 123 456</span>
+                <br />
+                <span><b>Email: </b>icon@icondesign.com.au</span>
+                <br />
+                <span><b>Socials:</b></span>
+            </p>
+
+            <div class="social">
+                <a class="social" href="https://www.instagram.com">
+                <img src="images/instagram_logo.png">
+                </a>
+                <a class="social" href="https://www.twitter.com.au">
+                <img src="images/twitter_logo.png" />
+                </a>
+                <a class="social" href="https://www.facebook.com">
+                <img src="images/facebook_logo.png"/>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        const sound1 = new buzz.sound ('audio/recording1.wav')
+        const sound2 = new buzz.sound ('audio/recording2.wav')
+        const sound3 = new buzz.sound ('audio/recording3.wav')
+        const sound4 = new buzz.sound ('audio/recording4.wav')
+        const sound5 = new buzz.sound ('audio/recording5.wav')
+        const sound6 = new buzz.sound ('audio/recording6.wav')
+        const sound7 = new buzz.sound ('audio/recording7.wav')
+        const sound8 = new buzz.sound ('audio/recording8.wav')
+        const sound9 = new buzz.sound ('audio/recording9.wav')
+        
+        window.onload = () => {
+            document.getElementById ("image1sound")
+                .onmouseover = () => {
+                    console.log ('mouse over!')
+                    sound1.play ()
+                }
+            document.getElementById ("image2sound")
+                .onmouseover = () => sound2.play ()
+            document.getElementById ("image3sound")
+                .onmouseover = () => sound3.play ()
+            document.getElementById ("image4sound")
+                .onmouseover = () => sound4.play ()
+            document.getElementById ("image5sound")
+                .onmouseover = () => sound5.play ()
+            document.getElementById ("image6sound")
+                .onmouseover = () => sound6.play ()
+            document.getElementById ("image7sound")
+                .onmouseover = () => sound7.play ()
+            document.getElementById ("image8sound")
+                .onmouseover = () => sound8.play ()
+            document.getElementById ("image9sound")
+                .onmouseover = () => sound9.play ()
+        }
+
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+
+            // change display attribute of all elements 
+            // of tabcontent array to "none"
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // tablinks = document.getElementsByClassName("tablink");
+            // for (i = 0; i < tablinks.length; i++) {
+            //     tablinks[i].style.backgroundColor = "";
+            // }
+
+            // var i, blogcontent, bloglinks;
+            // blogcontent = document.getElementsByClassName("blogcontent");
+            // for (i = 0; i < blogcontent.length; i++) {
+            //     blogcontent[i].style.display = "none";
+            // }
+            // bloglinks = document.getElementsByClassName("bloglink");
+            // for (i = 0; i < bloglinks.length; i++) {
+            //     bloglinks[i].style.backgroundColor = "";
+            // }
+
+            const got_element = document.getElementById(pageName)
+            console.log (got_element)
+            got_element.style.display = "block";
+            // elmnt.style.backgroundColor = color;
+        
+        }
+
+        document.getElementById("defaultOpen").click();
+
+    </script>
+
+</body>
+
+</html>
